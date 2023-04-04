@@ -1,12 +1,12 @@
 {
-  "name": "mvc-tech-blog",
+  "name": "mvc-blog",
   "version": "1.0.0",
-  "description": "## User Story",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seed": "node Develop/seeds/index.js"
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,8 @@
     "express-handlebars": "^6.0.7",
     "express-session": "^1.17.3",
     "fs": "^0.0.1-security",
-    "heroku": "^7.68.2",
-    "mysql2": "^3.1.2",
-    "sequelize": "^6.28.1"
+    "heroku": "^7.69.1",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.30.0"
   }
 }
