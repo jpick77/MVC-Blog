@@ -1,0 +1,55 @@
+<div class="post">
+
+  <h2>{{name}}</h2>
+         
+         {{#if logged_in}}
+         <div class="deleteButton"><button id="deleteBtn" data-id="{{id}}">delete</button></div>
+         <a href="/edit/{{id}}"><div class="editButton"><button id="editBtn" data-id="{{id}}">edit</button></div></a>
+        {{/if}}
+
+   <p>Created by {{user.name}} on {{date_created}}</p>
+  <p>{{content}}</p>
+
+
+</div>
+
+<div class="comments">
+  <h3>Comments</h3>
+  {{#each comments as |comment|}}
+
+    <div class="individualComment">
+        {{#if ../logged_in}}
+         <div class="deleteButton"><button id="commentDeleteBtn" data-id="{{comment.id}}">delete</button></div>
+        {{/if}}
+
+      <p>Commented by {{comment.name}} on {{date_created}}</p>
+
+      <p>{{comment.comment}}</p>
+    </div>
+
+    {{/each}}
+
+</div>
+
+{{#if logged_in}}
+<div class="addComment">
+    <h2>Add a New Comment</h2>
+    <form class="form new-comment-form">
+      <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-input" id="post-comment" name="post-comment"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" id="submitBtn" data="{{id}}">Submit</button>
+      </div>
+    </form>
+
+</div>
+
+
+
+<script src="./js/deletePost.js"></script>
+<script src="./js/deleteComment.js"></script>
+<script src="./js/createComment.js"></script>
+
+{{/if}}
