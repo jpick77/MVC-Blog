@@ -36,8 +36,8 @@ app.set('views', path.join(__dirname, "./Develop/views"));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(express.static(path.join(__dirname, "./Develop/public")));
-app.use('/', serveStatic(path.join(__dirname, "./Develop/public")))
+app.use(express.static(path.join(__dirname, "./Develop/public")));
+// app.use('/', serveStatic(path.join(__dirname, "./Develop/public")))
 
 app.use(routes);
 
