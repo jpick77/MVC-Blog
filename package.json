@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "19.8.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -29,6 +32,7 @@
     "fs": "^0.0.1-security",
     "heroku": "^7.69.1",
     "mysql2": "^3.2.0",
+    "node": "^19.8.1",
     "sequelize": "^6.30.0"
   }
 }
