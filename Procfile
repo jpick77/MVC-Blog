@@ -1,2 +1,2 @@
-web: node run seed
-web: node server.js
+web:node run seed
+web:node server.js
