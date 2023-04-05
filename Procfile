@@ -1,2 +1,1 @@
-web:node run seed
-web:node server.js
+web: npm start
