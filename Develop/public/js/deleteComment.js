@@ -18,5 +18,5 @@ const delCommentButtonHandler = async (event) => {
  
  
  document
-    .querySelector('#commentDeleteBtn')
+    .querySelector('.commentDeleteBtn')
     .addEventListener('click', delCommentButtonHandler);

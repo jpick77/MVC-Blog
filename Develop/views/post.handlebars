@@ -3,8 +3,10 @@
   <h2>{{name}}</h2>
          
          {{#if logged_in}}
+        
          <div class="deleteButton"><button id="deleteBtn" data-id="{{id}}">delete</button></div>
          <a href="/edit/{{id}}"><div class="editButton"><button id="editBtn" data-id="{{id}}">edit</button></div></a>
+         
         {{/if}}
 
    <p>Created by {{user.name}} on {{date_created}}</p>
@@ -19,7 +21,7 @@
 
     <div class="individualComment">
         {{#if ../logged_in}}
-         <div class="deleteButton"><button id="commentDeleteBtn" data-id="{{comment.id}}">delete</button></div>
+         <div class="deleteButton"><button class="commentDeleteBtn" data-id="{{comment.id}}">delete</button></div>
         {{/if}}
 
       <p>Commented by {{comment.name}} on {{date_created}}</p>
@@ -48,8 +50,8 @@
 
 
 
-<script src="../public/js/deletePost.js"></script>
-<script src="../public/js/deleteComment.js"></script>
-<script src="../public/js/createComment.js"></script>
+<script src="./js/deletePost.js"></script>
+<script src="./js/deleteComment.js"></script>
+<script src="./js/createComment.js"></script>
 
 {{/if}}

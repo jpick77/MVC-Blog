@@ -8,7 +8,8 @@ const commentFormHandler = async (event) => {
     
     if (comment) {
 
-
+      console.log(id);
+      console.log(comment)
       const response = await fetch(`api/post/comment/${id}`, {
         method: 'POST',
         body: JSON.stringify({ id, comment }),
@@ -16,7 +17,7 @@ const commentFormHandler = async (event) => {
           'Content-Type': 'application/json',
         },
       });
-  
+      
       if (response.ok) {
         document.location.replace('/');
       } else {
